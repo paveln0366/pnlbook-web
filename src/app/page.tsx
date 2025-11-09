@@ -1,69 +1,66 @@
-import Image from "next/image";
-
 export default function Home() {
     return (
-        <div className="flex min-h-screen items-center justify-center bg-white font-sans dark:bg-black">
-            <main
-                className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-                {/*<Image*/}
-                {/*    className="dark:invert"*/}
-                {/*    src="/next.svg"*/}
-                {/*    alt="Next.js logo"*/}
-                {/*    width={100}*/}
-                {/*    height={20}*/}
-                {/*    priority*/}
-                {/*/>*/}
-                <h1 className="max-w-xs text-5xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-                    PNLBOOK
-                </h1>
-                <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-                    <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-                        Everything you ever wanted to know about your trading...
-                    </h1>
-                    <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-                        Watch your trades in{" "}
-                        <a
-                            href=""
-                            className="font-medium text-zinc-950 dark:text-zinc-50"
-                        >
-                            real time
-                        </a>{" "}
-                        and learn from past actions to{" "}
-                        <a
-                            href=""
-                            className="font-medium text-zinc-950 dark:text-zinc-50"
-                        >
-                            improve
-                        </a>{" "}
-                        your performance.
-                    </p>
-                </div>
-                <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-                    <a
-                        className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Image
-                            className="dark:invert"
-                            src="/vercel.svg"
-                            alt="Vercel logomark"
-                            width={16}
-                            height={16}
-                        />
-                        Sign up
+        <div className="min-h-screen bg-gray-100 flex flex-col">
+            <header className="flex items-center justify-between px-8 py-4 bg-white shadow">
+                <div className="text-xl font-bold">PNLBOOK</div>
+
+                <nav className="space-x-6 hidden md:flex">
+                    <a href="" className="text-gray-500 hover:text-blue-600">Features</a>
+                    <a href="" className="text-gray-500 hover:text-blue-600">Pricing</a>
+                    <a href="" className="text-gray-500 hover:text-blue-600">Blog</a>
+                    <a href="" className="text-gray-500 hover:text-blue-600">Help</a>
+                </nav>
+
+                <div className="space-x-4">
+                    <a href="/login">
+                        <button
+                            type="submit"
+                            className="px-4 py-2 border border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200">
+                            Log In
+                        </button>
                     </a>
-                    <a
-                        className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-                        href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Log in
+                    <a href="/signup">
+                        <button type="submit"
+                                className="px-4 py-2 bg-blue-600 text-white p-3 rounded  hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400">
+                            Sign Up
+                        </button>
+                    </a>
+                </div>
+
+            </header>
+
+            <main className="flex flex-col items-center justify-center flex-1 text-center px-4">
+                <h1 className="text-5xl font-bold mb-4">Welcome to PNLBOOK</h1>
+                {/*<h1 className="text-5xl font-bold mb-4">Everything you ever wanted to know about your trading...</h1>*/}
+                <p className="max-w-md text-xl leading-8 text-gray-500 dark:text-zinc-400 mb-8">
+                    Watch your trades in{" "}
+                    <a href="" className="font-medium text-blue-600 dark:text-zinc-50"> real time </a>
+                    {" "}and learn from past actions to{" "}
+                    <a href="" className="font-medium text-blue-600 dark:text-zinc-50"> improve </a>
+                    {" "}your performance.
+                </p>
+                {/*<p className="text-xl text-gray-500 mb-8">*/}
+                {/*    Управляйте своими финансами и анализируйте доходы легко и просто*/}
+                {/*</p>*/}
+
+                <div className="space-x-4">
+                    <a href="/login">
+                        <button
+                            type="submit"
+                            className="px-10 py-4 border border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200 text-lg">
+                            Log In
+                        </button>
+                    </a>
+                    <a href="/signup">
+                        <button type="submit"
+                                className="px-10 py-4 bg-blue-600 text-white p-3 rounded  hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400 text-lg">
+                            Sign Up
+                        </button>
                     </a>
                 </div>
             </main>
+            <footer className="text-center text-sm p-4 text-white bg-blue-700">© 2025 Pnlbook – All Rights Reserved.
+            </footer>
         </div>
     );
 }
