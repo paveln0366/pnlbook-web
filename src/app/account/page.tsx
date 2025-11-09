@@ -20,20 +20,20 @@ export default function Home() {
                     <a href="">
                         <button
                             type="submit"
-                            className="px-4 py-2 border border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200">
+                            className="px-4 py-2 border-2 border-gray-400 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-100">
                             Profile
                         </button>
                     </a>
                     <Link href="/">
                         <button type="submit"
                                 className="px-4 py-2 bg-blue-600 text-white p-3 rounded  hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400">
-                            Exit
+                            Log Out
                         </button>
                     </Link>
                 </div>
 
                 <button
-                    className="text-xl md:hidden p-3 text-gray-600 rounded-lg hover:bg-gray-200 active:bg-gray-300 transition"
+                    className="text-xl md:hidden p-3 border-2 border-gray-400 text-gray-500 rounded-lg hover:bg-gray-50 active:bg-gray-100 transition"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     ☰
@@ -55,7 +55,7 @@ export default function Home() {
                             <Link href="/">
                                 <button type="submit"
                                         className="px-4 py-2 bg-blue-600 text-white p-3 rounded  hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400">
-                                    Exit
+                                    Log Out
                                 </button>
                             </Link>
                         </div>

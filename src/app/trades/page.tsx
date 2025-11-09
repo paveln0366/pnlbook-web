@@ -26,7 +26,8 @@ export default function Trade() {
     }, []);
     return (
         <div style={{width: '100%', height: '500px'}}>
-            <h1 style={{textAlign: 'center'}}>Trade</h1>
+            <h1 className="text-xl font-bold mb-2 px-4 py-4">Trade BTCUSDT</h1>
+            <h1 style={{textAlign: 'center'}}>Chart</h1>
             <div ref={chartRef} style={{width: '100%', height: '100%'}}/>
         </div>
     );

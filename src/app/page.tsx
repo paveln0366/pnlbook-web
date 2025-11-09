@@ -1,5 +1,7 @@
 "use client";
 import {useState} from "react";
+import Image from "next/image";
+
 
 export default function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +22,7 @@ export default function Home() {
                     <a href="/login">
                         <button
                             type="submit"
-                            className="px-4 py-2 border border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200">
+                            className="px-4 py-2 border-2 border-gray-400 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-100 transition">
                             Log In
                         </button>
                     </a>
@@ -33,7 +35,7 @@ export default function Home() {
                 </div>
 
                 <button
-                    className="text-xl md:hidden p-3 text-gray-600 rounded-lg hover:bg-gray-200 active:bg-gray-300 transition"
+                    className="text-xl md:hidden p-3 border-2 border-gray-400 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-100 transition"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     ☰
@@ -50,7 +52,7 @@ export default function Home() {
                             <a href="/login">
                                 <button
                                     type="submit"
-                                    className="px-4 py-2 border border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200">
+                                    className="px-4 py-2 border-2 border-gray-400 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200">
                                     Log In
                                 </button>
                             </a>
@@ -77,10 +79,11 @@ export default function Home() {
                     }}
                 ></div>
                 <h1 className="text-5xl font-bold mb-4 relative z-10">Welcome to PNLBOOK</h1>
-                <p className="max-w-md text-xl leading-8 text-gray-500 dark:text-zinc-400 mb-8 relative z-10">
-                    Watch your trades in{" "}
-                    <a href="" className="font-medium text-blue-600 dark:text-zinc-50"> real time </a>
-                    {" "}and learn from past actions to{" "}
+                {/*Агрегируй свои данные с многих источников и анализируй свои трейды, чтобы улучшить свои показатели.*/}
+                <p className="max-w-md text-xl leading-8 text-gray-600 dark:text-zinc-400 mb-8 relative z-10">
+                    Aggregate data from multiple sources and {" "}
+                    <a href="" className="font-medium text-blue-600 dark:text-zinc-50"> analyze </a>
+                    {" "}your trades to{" "}
                     <a href="" className="font-medium text-blue-600 dark:text-zinc-50"> improve </a>
                     {" "}your performance.
                 </p>
@@ -92,18 +95,42 @@ export default function Home() {
                     <a href="/login">
                         <button
                             type="submit"
-                            className="px-10 py-4 border bg-gray-50 border-gray-500 text-gray-500 rounded hover:bg-gray-100 active:bg-gray-200 text-lg">
+                            className="px-10 py-4 border-2 border-gray-400 bg-gray-50 text-gray-500 rounded-4xl hover:bg-gray-100 active:bg-gray-200 text-lg">
                             Log In
                         </button>
                     </a>
                     <a href="/signup">
                         <button type="submit"
-                                className="px-10 py-4 bg-blue-600 text-white p-3 rounded  hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400 text-lg">
-                            Sign Up
+                                className="px-10 py-4 bg-blue-600 text-white p-3 rounded-4xl  hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400 text-lg">
+                            Start for free
                         </button>
                     </a>
                 </div>
             </main>
+
+            <div className="flex justify-center items-center gap-12 p-8 bg-white">
+                <Image
+                    src="/logo_binance.svg"
+                    alt="Binance"
+                    width={100}
+                    height={100}
+                    className=""
+                />
+                <Image
+                    src="/logo_bybit.svg"
+                    alt="Bybit"
+                    width={100}
+                    height={100}
+                    className=""
+                />
+                <Image
+                    src="/logo_okx.svg"
+                    alt="OKX"
+                    width={100}
+                    height={100}
+                    className=""
+                />
+            </div>
             <footer className="text-center text-sm p-4 text-white bg-blue-700">© 2025 Pnlbook – All Rights Reserved.
             </footer>
         </div>
