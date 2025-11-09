@@ -56,7 +56,7 @@ export default function Home() {
                     <a href="/login">
                         <button
                             type="submit"
-                            className="px-10 py-4 border bg-gray-50 border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200 text-lg">
+                            className="px-10 py-4 border bg-gray-50 border-gray-500 text-gray-500 rounded hover:bg-gray-100 active:bg-gray-200 text-lg">
                             Log In
                         </button>
                     </a>

@@ -20,10 +20,12 @@ export default function Login() {
                            className="w-full p-3 border border-gray-300 rounded focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none"/>
                     <input type="password" placeholder="Password"
                            className="w-full p-3 border border-gray-300 rounded focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none"/>
-                    <button type="submit"
-                            className=" w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400">
-                        Log In
-                    </button>
+                    <Link href="/account">
+                        <button type="submit"
+                                className=" w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-400">
+                            Log In
+                        </button>
+                    </Link>
                 </form>
                 <p className="mt-4 text-center text-sm">
                     Don&#39;t have an account? <Link href="/signup" className="text-blue-500">Sign Up</Link>
