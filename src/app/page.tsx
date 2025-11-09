@@ -29,10 +29,19 @@ export default function Home() {
 
             </header>
 
-            <main className="flex flex-col items-center justify-center flex-1 text-center px-4">
-                <h1 className="text-5xl font-bold mb-4">Welcome to PNLBOOK</h1>
-                {/*<h1 className="text-5xl font-bold mb-4">Everything you ever wanted to know about your trading...</h1>*/}
-                <p className="max-w-md text-xl leading-8 text-gray-500 dark:text-zinc-400 mb-8">
+            <main className="relative flex flex-col items-center justify-center flex-1 text-center px-4">
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage: "url('/bg.png')",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        opacity: 0.04,
+                    }}
+                ></div>
+                <h1 className="text-5xl font-bold mb-4 relative z-10">Welcome to PNLBOOK</h1>
+                <p className="max-w-md text-xl leading-8 text-gray-500 dark:text-zinc-400 mb-8 relative z-10">
                     Watch your trades in{" "}
                     <a href="" className="font-medium text-blue-600 dark:text-zinc-50"> real time </a>
                     {" "}and learn from past actions to{" "}
@@ -43,11 +52,11 @@ export default function Home() {
                 {/*    Управляйте своими финансами и анализируйте доходы легко и просто*/}
                 {/*</p>*/}
 
-                <div className="space-x-4">
+                <div className="space-x-4 relative z-10">
                     <a href="/login">
                         <button
                             type="submit"
-                            className="px-10 py-4 border border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200 text-lg">
+                            className="px-10 py-4 border bg-gray-50 border-gray-500 text-gray-500 rounded hover:bg-gray-50 active:bg-gray-200 text-lg">
                             Log In
                         </button>
                     </a>

@@ -2,8 +2,18 @@ import Link from "next/link";
 
 export default function Login() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <div className="relative min-h-screen flex items-center justify-center bg-gray-100">
+            <div
+                className="absolute inset-0"
+                style={{
+                    backgroundImage: "url('/bg.png')",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    opacity: 0.04,
+                }}
+            ></div>
+            <div className="relative bg-white p-8 rounded-lg shadow-md w-full max-w-md z-10">
                 <h2 className="text-2xl font-bold mb-6 text-center">Log In</h2>
                 <form className="space-y-4">
                     <input type="email" placeholder="Email"
